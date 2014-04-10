@@ -1,0 +1,5 @@
+--color
+--format progress
+--format documentation --out rspec_output.txt
+
+
