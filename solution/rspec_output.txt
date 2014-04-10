@@ -2,5 +2,5 @@
 RSpec Config
   is running ok
 
-Finished in 0.00077 seconds
+Finished in 0.0007 seconds
 1 example, 0 failures

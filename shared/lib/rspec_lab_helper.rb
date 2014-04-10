@@ -12,6 +12,8 @@ module RSpecLabHelper
       @requirePaths = requirePaths
       @title = title
 
+      puts "Setting up #{title} Test Suite"
+
       if @requirePaths.nil?
         @requirePaths = []
         @requirePaths.push labPath + "/*.rb"
