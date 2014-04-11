@@ -1,6 +1,53 @@
 
-RSpec Config
-  is running ok
+RandomArrayGenerator
+  #generate_random_array
+    should take 3 arguments (size, min, max)
+    should return nil if size is < 0
+    should return nil if min > max
+    should return an array
+    should return [] if size == 0
+    should return an array with length of the (size) parameter
+    should return an array of integers
+    should not return integers less than the min parameter
+    should not return integers greater than the max parameter
+    should return an array of random integers
 
-Finished in 0.0007 seconds
-1 example, 0 failures
+Sorter
+  #swap_items_in_array
+    should take 3 arguments
+    should return the array
+    should do nothing if both indices are the same
+  #sort_array
+    should take 1 argument
+    should return the same array object that was passed in
+    should sort the array from lowest to highest
+    should not use the build in sort method
+    should sort a very large array from lowest to highest (PENDING: Temporarily disabled with xit)
+
+TraineeGroceryBagger
+  #pack
+    should take 1 argument (items_array)
+    should return nil if items_array is nil
+    should return nil if items_array is empty
+    4 items weighing 10 lbs total
+      should return an array of bags
+      should return an array of one bag
+      should return an array of one bag which should itself be an array
+      should return an array of one bag containing all 4 items
+    1 item weighing 10 lbs total
+      should return an array of one bag
+      should return an array of one bag containing the 1 item
+    5 items weighing 20 lbs total
+      should return an array of bags each weighing less than 10 lbs
+      should place each item in one (and only one) bag
+    All the items
+      should return an array of bags each weighing less than 10 lbs
+      should place each item in one (and only one) bag
+
+Pending:
+  Sorter#sort_array should sort a very large array from lowest to highest
+    # Temporarily disabled with xit
+    # /work/labs/algorithms-ruby-lab/shared/spec/lab_spec.rb:100
+
+Finished in 0.01032 seconds
+31 examples, 0 failures, 1 pending
