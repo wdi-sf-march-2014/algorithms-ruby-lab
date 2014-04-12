@@ -1,5 +1,35 @@
 require 'rspec'
 
+describe MathExpert do
+  describe "#calculate_factorial_iterative" do
+    it "should take 1 argument (1)" do
+      expect(MathExpert).to respond_to(:calculate_factorial_iterative).with(1).arguments
+    end
+    it "should return 24 for 4" do
+      expect(MathExpert.calculate_factorial_iterative(4)).to eq 24
+    end
+    it "should return 120 for 5" do
+      expect(MathExpert.calculate_factorial_iterative(5)).to eq 120
+    end
+    it "should return 39916800 for 11" do
+      expect(MathExpert.calculate_factorial_iterative(11)).to eq 39916800
+    end
+  end
+  describe "#calculate_factorial_recursive" do
+    it "should take 1 argument (1)" do
+      expect(MathExpert).to respond_to(:calculate_factorial_recursive).with(1).arguments
+    end
+    it "should return 24 for 4" do
+      expect(MathExpert.calculate_factorial_recursive(4)).to eq 24
+    end
+    it "should return 120 for 5" do
+      expect(MathExpert.calculate_factorial_recursive(5)).to eq 120
+    end
+    it "should return 39916800 for 11" do
+      expect(MathExpert.calculate_factorial_recursive(11)).to eq 39916800
+    end
+  end
+end
 
 describe RandomArrayGenerator do
   describe "#generate_random_array" do
@@ -112,6 +142,8 @@ describe Sorter do
   end
 
 end
+
+
 
 =begin
 The TraineeGroceryBagger packs your Items at the store into Bags
@@ -263,4 +295,31 @@ describe TraineeGroceryBagger do
 
     end
   end
+end
+
+
+
+
+
+describe Searcher do
+
+  before :all do
+    @four_items = [2, 3, 5, 9]
+    numbers = Array.new(100){ rand(1..10000) }.sort
+    randIndex = rand(0..99)
+    @findItem = numbers[randIndex]
+  end
+
+  describe "#find_by_binary_search" do
+    it "should take 2 parameters" do
+      expect(Searcher).to respond_to(:find_by_binary_search).with(2).arguments
+    end
+    it "should find a number that exists" do
+      Searcher.find_by_binary_search(3, @four_items).should eq true
+    end
+    it "should find not a number that doesn't exist" do
+      Searcher.find_by_binary_search(1, @four_items).should eq false
+    end
+  end
+
 end

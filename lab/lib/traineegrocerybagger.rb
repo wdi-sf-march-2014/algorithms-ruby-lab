@@ -6,8 +6,9 @@ module TraineeGroceryBagger
     bags = nil
 
     #TODO: Put all the items in bags with no bag weighing more than MAX_BAG_WEIGHT
-    #TODO: Don't change the item objects
-    #TODO: Return the Bags
+    #Return the Bags in an array
+    #Return each bag as an array of items
+    #Note: there's no need to balance or optimize the bagging
 
     bags
   end

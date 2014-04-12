@@ -1,4 +1,16 @@
 
+MathExpert
+  #calculate_factorial_iterative
+    should take 1 argument (1)
+    should return 24 for 4
+    should return 120 for 5
+    should return 39916800 for 11
+  #calculate_factorial_recursive
+    should take 1 argument (1)
+    should return 24 for 4
+    should return 120 for 5
+    should return 39916800 for 11
+
 RandomArrayGenerator
   #generate_random_array
     should take 3 arguments (size, min, max)
@@ -44,10 +56,16 @@ TraineeGroceryBagger
       should return an array of bags each weighing less than 10 lbs
       should place each item in one (and only one) bag
 
+Searcher
+  #find_by_binary_search
+    should take 2 parameters
+    should find a number that exists
+    should find not a number that doesn't exist
+
 Pending:
   Sorter#sort_array should sort a very large array from lowest to highest
     # Temporarily disabled with xit
-    # /work/labs/algorithms-ruby-lab/shared/spec/lab_spec.rb:100
+    # /work/labs/algorithms-ruby-lab/shared/spec/lab_spec.rb:130
 
-Finished in 0.01032 seconds
-31 examples, 0 failures, 1 pending
+Finished in 0.0137 seconds
+42 examples, 0 failures, 1 pending
