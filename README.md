@@ -10,7 +10,7 @@ Good luck!
 
 # Overall Setup and Submission Instructions
 
-* Fork (https://github.com/stujo/algorithms-ruby-lab)[https://github.com/stujo/algorithms-ruby-lab] to your GitHub account
+* Fork [https://github.com/wdi-sf-march-2014/algorithms-ruby-lab](https://github.com/wdi-sf-march-2014/algorithms-ruby-lab) to your GitHub account
 
 * Clone __YOUR FORK__ to your laptop
 
