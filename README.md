@@ -47,3 +47,12 @@ Good luck!
 
 * With some labs a solution may be provided for your reference in the `solution` folder. But __please do not refer to this__ until you have exhausted all other means of solving the lab. On some assignments the instructor may choose not to provide the solution until after the labwork has been submitted
 
+#IMPORTANT NOTES!
+
+* The specs for you code are in `shared/spec/lab_spec.rb` instead of the normal `spec` folder because the lab shares the tests between the solution and lab projects.
+
+* Don't change the tests!
+
+* It is not expected that you are able to complete the entire lab at this time, some people are more advanced at programming than others, so don't stress out. The process of trying to solve the problems _is_ the excercise and learning experience 
+
+
