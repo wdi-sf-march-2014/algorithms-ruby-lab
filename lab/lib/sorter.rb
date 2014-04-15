@@ -1,6 +1,6 @@
 
-# Get the idea of the sort from WikiPedia
-# http://en.wikipedia.org/wiki/Bubble_sort
+# # Get the idea of the sort from WikiPedia
+# # http://en.wikipedia.org/wiki/Bubble_sort
 
 module Sorter
 
@@ -14,3 +14,4 @@ module Sorter
   end
 
 end
+
