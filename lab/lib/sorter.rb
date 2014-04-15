@@ -1,16 +1,28 @@
-
-# Get the idea of the sort from WikiPedia
-# http://en.wikipedia.org/wiki/Bubble_sort
-
 module Sorter
 
-  def self.sort_array numbers
-    #TODO: Sort the array of numbers from low to high in the same array and return the array
-    numbers
+	def self.swap_items_in_array (items, indexA, indexB)
+
+		x = items[indexA]
+		items[indexA] = items[indexB]
+		items[indexB] = x
+		items
   end
 
-  def self.swap_items_in_array items, indexA, indexB
-    #TODO: Swap the items at indexA and indexB and return the items
+  def self.sort_array (numbers)
+
+  	n = numbers.length-1
+
+  	until n == 0
+  		if numbers[n] > numbers[n-1]
+  			n -= 1
+  		else
+  			self.swap_items_in_array(numbers,n,n-1)
+  			n = numbers.length-1
+  		end
+  	end
+
+  	return numbers
+
   end
 
 end

@@ -1,21 +1,22 @@
 module MathExpert
 
-  #http://en.wikipedia.org/wiki/Factorial
-
   #5! = 5 *  4 *  3 *  2 *  1 = 120
-  #answer = (n) * (n-1) * (n-2) * (n-3) * (n-4) * (n-5) ...
 
   #iterative
-  def self.calculate_factorial_iterative n
-    #TODO: Implement factorial using a loop
-    n
+  def self.calculate_factorial_iterative(n)
+    f = 1
+    while n > 0 do
+      f = f*n
+      n -= 1
+    end
+    return f
   end
+
 
   #recursive
-  def self.calculate_factorial_recursive n
-    #TODO: Implement factorial using recursion
-    n
+  def self.calculate_factorial_recursive(n)
+    n = n*self.calculate_factorial_recursive(n-1) unless n == 1
+    return n
   end
-
 
 end

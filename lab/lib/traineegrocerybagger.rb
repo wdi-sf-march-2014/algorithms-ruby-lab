@@ -1,16 +1,31 @@
 module TraineeGroceryBagger
 
-  MAX_BAG_WEIGHT = 10
+  def self.pack(items)
+    if items == nil
+    	bags = nil
+    elsif items.length == 0
+    	bags = nil
+    else
+    	bags = []
+	    bag_index = 0
+	    bags[bag_index] = []
+	    current_bag_weight = 0
+			item_index = items.length-1
+   		
+   		until item_index < 0 do 
 
-  def self.pack items
-    bags = nil
+	    	if (current_bag_weight + items[item_index][:weight]) > 10
+	    		bag_index += 1
+	    		bags[bag_index] = []
+	    		current_bag_weight = 0
+	    	end
+				
+				bags[bag_index].push(items[item_index])
+				current_bag_weight += items[item_index][:weight]
+				item_index -= 1
+			end
 
-    #TODO: Put all the items in bags with no bag weighing more than MAX_BAG_WEIGHT
-    #Return the Bags in an array
-    #Return each bag as an array of items
-    #Note: there's no need to balance or optimize the bagging
-
-    bags
+			return bags
+  	end
   end
-
 end
