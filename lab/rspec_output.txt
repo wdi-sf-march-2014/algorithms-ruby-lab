@@ -42,7 +42,24 @@ TraineeGroceryBagger
     should return nil if items_array is nil
     should return nil if items_array is empty
     4 items weighing 10 lbs total
-      should return an array of bags (FAILED - 1)
+      should return an array of bags
+      should return an array of one bag
+      should return an array of one bag which should itself be an array
+      should return an array of one bag containing all 4 items
+    1 item weighing 10 lbs total
+      should return an array of one bag
+      should return an array of one bag containing the 1 item
+    5 items weighing 20 lbs total
+      should return an array of bags each weighing less than 10 lbs
+      should place each item in one (and only one) bag
+    All the items
+      should return an array of bags each weighing less than 10 lbs
+      should place each item in one (and only one) bag
+
+Searcher
+  #find_by_binary_search
+    should take 2 parameters
+    should find a number that exists (FAILED - 1)
 
 Pending:
   Sorter#sort_array should sort a very large array from lowest to highest
@@ -51,14 +68,18 @@ Pending:
 
 Failures:
 
-  1) TraineeGroceryBagger#pack 4 items weighing 10 lbs total should return an array of bags
-     Failure/Error: expect(basic_items_packed).to be_a Array
-       expected nil to be a kind of Array
-     # /Users/Zoe/Code/Lab_Day6/algorithms-ruby-lab/shared/spec/lab_spec.rb:235:in `block (4 levels) in <top (required)>'
+  1) Searcher#find_by_binary_search should find a number that exists
+     Failure/Error: Searcher.find_by_binary_search(3, @four_items).should eq true
+       
+       expected: true
+            got: false
+       
+       (compared using ==)
+     # /Users/Zoe/Code/Lab_Day6/algorithms-ruby-lab/shared/spec/lab_spec.rb:317:in `block (3 levels) in <top (required)>'
 
-Finished in 0.01187 seconds
-30 examples, 1 failure, 1 pending
+Finished in 0.0142 seconds
+41 examples, 1 failure, 1 pending
 
 Failed examples:
 
-rspec /Users/Zoe/Code/Lab_Day6/algorithms-ruby-lab/shared/spec/lab_spec.rb:234 # TraineeGroceryBagger#pack 4 items weighing 10 lbs total should return an array of bags
+rspec /Users/Zoe/Code/Lab_Day6/algorithms-ruby-lab/shared/spec/lab_spec.rb:316 # Searcher#find_by_binary_search should find a number that exists
