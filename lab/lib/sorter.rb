@@ -4,13 +4,26 @@
 
 module Sorter
 
-  def self.sort_array numbers
-    #TODO: Sort the array of numbers from low to high in the same array and return the array
-    numbers
+def self.sort_array(numbers)
+	numbers.each_index do |i|
+		(numbers.length - i - 1).times do |compare|
+			if numbers[compare] > numbers[compare + 1]
+				numbers[compare], numbers[compare +1] = numbers[compare + 1], numbers[compare]
+			end
+		end
+	end
+    return numbers
   end
+
 
   def self.swap_items_in_array items, indexA, indexB
     #TODO: Swap the items at indexA and indexB and return the items
+    temp = []
+    temp << items[indexA]
+    items[indexA] = items[indexB]
+    items[indexB] = temp[0]
+    return items
+
   end
 
 end
