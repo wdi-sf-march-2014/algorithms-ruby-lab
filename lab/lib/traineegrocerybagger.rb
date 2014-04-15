@@ -9,7 +9,7 @@ module TraineeGroceryBagger
     #Return the Bags in an array
     #Return each bag as an array of items
     #Note: there's no need to balance or optimize the bagging
-
+    
     bags
   end
 
