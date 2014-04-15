@@ -41,3 +41,18 @@ module Searcher
   end
 
 end
+
+example_array = [10, 21, 34, 99, 104, 195]
+
+s_i = mid + 1
+e_i = len - 1
+target = number to find
+
+
+def binary_search(arr, target, s_i, e_i)
+	#base case  = found the target or s_i = e_i
+	mid = s_i + e_i / 2
+	mid_val = arr[mid] #i.e. get me the value at mid, will return 34 in the first case
+
+
+
