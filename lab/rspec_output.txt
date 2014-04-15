@@ -2,22 +2,63 @@
 MathExpert
   #calculate_factorial_iterative
     should take 1 argument (1)
-    should return 24 for 4 (FAILED - 1)
+    should return 24 for 4
+    should return 120 for 5
+    should return 39916800 for 11
+  #calculate_factorial_recursive
+    should take 1 argument (1)
+    should return 24 for 4
+    should return 120 for 5
+    should return 39916800 for 11
+
+RandomArrayGenerator
+  #generate_random_array
+    should take 3 arguments (size, min, max)
+    should return nil if size is < 0
+    should return nil if min > max
+    should return an array
+    should return [] if size == 0
+    should return an array with length of the (size) parameter
+    should return an array of integers
+    should not return integers less than the min parameter
+    should not return integers greater than the max parameter
+    should return an array of random integers
+
+Sorter
+  #swap_items_in_array
+    should take 3 arguments
+    should return the array
+    should do nothing if both indices are the same
+  #sort_array
+    should take 1 argument
+    should return the same array object that was passed in
+    should sort the array from lowest to highest
+    should not use the build in sort method
+    should sort a very large array from lowest to highest (PENDING: Temporarily disabled with xit)
+
+TraineeGroceryBagger
+  #pack
+    should take 1 argument (items_array)
+    should return nil if items_array is nil
+    should return nil if items_array is empty
+    4 items weighing 10 lbs total
+      should return an array of bags (FAILED - 1)
+
+Pending:
+  Sorter#sort_array should sort a very large array from lowest to highest
+    # Temporarily disabled with xit
+    # /Users/Zoe/Code/Lab_Day6/algorithms-ruby-lab/shared/spec/lab_spec.rb:130
 
 Failures:
 
-  1) MathExpert#calculate_factorial_iterative should return 24 for 4
-     Failure/Error: expect(MathExpert.calculate_factorial_iterative(4)).to eq 24
-       
-       expected: 24
-            got: 4
-       
-       (compared using ==)
-     # /work/labs/algorithms-ruby-lab/shared/spec/lab_spec.rb:9:in `block (3 levels) in <top (required)>'
+  1) TraineeGroceryBagger#pack 4 items weighing 10 lbs total should return an array of bags
+     Failure/Error: expect(basic_items_packed).to be_a Array
+       expected nil to be a kind of Array
+     # /Users/Zoe/Code/Lab_Day6/algorithms-ruby-lab/shared/spec/lab_spec.rb:235:in `block (4 levels) in <top (required)>'
 
-Finished in 0.0015 seconds
-2 examples, 1 failure
+Finished in 0.01187 seconds
+30 examples, 1 failure, 1 pending
 
 Failed examples:
 
-rspec /work/labs/algorithms-ruby-lab/shared/spec/lab_spec.rb:8 # MathExpert#calculate_factorial_iterative should return 24 for 4
+rspec /Users/Zoe/Code/Lab_Day6/algorithms-ruby-lab/shared/spec/lab_spec.rb:234 # TraineeGroceryBagger#pack 4 items weighing 10 lbs total should return an array of bags
