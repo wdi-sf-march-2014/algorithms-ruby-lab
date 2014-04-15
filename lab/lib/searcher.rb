@@ -32,12 +32,56 @@ module Searcher
   # Expects haystack to be an array of integers
   # Expects haystack to be a sorted (low [0] to high [length])
 
+
   def self.find_by_binary_search(needle, haystack)
-
-    #TODO: Give it a go!
-    #Plan out you algorithm
-
-    false
+  	# find middle index
+  	middleIndex = (haystack.size/2).round
+  	# if array.size <=2 manually check if needle is inside and return true / false
+  	if haystack.size <= 2 
+  		haystack.each do |x|
+  			if x == needle
+  				abort("true")
+  			end
+  		end
+  		abort("false")
+  	end
+  	# if haystack[middleIndex] == needle   	
+  		# return true
+	if haystack[middleIndex] == needle
+		abort("true")
+	elsif (haystack[middleIndex] > needle)
+  		# apply binary search to array from Middleindex to end
+  		find_by_binary_search(needle, haystack.first(middleIndex+1))
+  	else 
+  		# apply binary search to array from beginning to Middleindex
+  		find_by_binary_search(needle, haystack.last(middleIndex+1))
+  	end
   end
 
 end
+
+stack = [3,4,6,7,8,8,69,56,9,5,96,5,95,69,65,9,568,6,3,65,7]
+stack.sort!
+p stack
+value = Searcher.find_by_binary_search(69,stack)
+p value
+
+
+
+
+# module Test
+# 	def self.loopingfun(x)
+# 		while x > 20
+# 			if x>100
+# 				abort("over 100")
+# 			else
+# 				loopingfun(x+1)
+# 			end
+# 		end
+# 		return "overOver"
+# 	end
+# end
+
+
+# p Test.loopingfun(30)
+
