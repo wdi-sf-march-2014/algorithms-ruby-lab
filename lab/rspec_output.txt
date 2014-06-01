@@ -2,22 +2,70 @@
 MathExpert
   #calculate_factorial_iterative
     should take 1 argument (1)
-    should return 24 for 4 (FAILED - 1)
+    should return 24 for 4
+    should return 120 for 5
+    should return 39916800 for 11
+  #calculate_factorial_recursive
+    should take 1 argument (1)
+    should return 24 for 4
+    should return 120 for 5
+    should return 39916800 for 11
 
-Failures:
+RandomArrayGenerator
+  #generate_random_array
+    should take 3 arguments (size, min, max)
+    should return nil if size is < 0
+    should return nil if min > max
+    should return an array
+    should return [] if size == 0
+    should return an array with length of the (size) parameter
+    should return an array of integers
+    should not return integers less than the min parameter
+    should not return integers greater than the max parameter
+    should return an array of random integers
 
-  1) MathExpert#calculate_factorial_iterative should return 24 for 4
-     Failure/Error: expect(MathExpert.calculate_factorial_iterative(4)).to eq 24
-       
-       expected: 24
-            got: 4
-       
-       (compared using ==)
-     # /work/labs/algorithms-ruby-lab/shared/spec/lab_spec.rb:9:in `block (3 levels) in <top (required)>'
+Sorter
+  #swap_items_in_array
+    should take 3 arguments
+    should return the array
+    should do nothing if both indices are the same
+  #sort_array
+    should take 1 argument
+    should return the same array object that was passed in
+    should sort the array from lowest to highest
+    should not use the build in sort method
+    should sort a very large array from lowest to highest (PENDING: Temporarily disabled with xit)
 
-Finished in 0.0015 seconds
-2 examples, 1 failure
+TraineeGroceryBagger
+  #pack
+    should take 1 argument (items_array)
+    should return nil if items_array is nil
+    should return nil if items_array is empty
+    4 items weighing 10 lbs total
+      should return an array of bags
+      should return an array of one bag
+      should return an array of one bag which should itself be an array
+      should return an array of one bag containing all 4 items
+    1 item weighing 10 lbs total
+      should return an array of one bag
+      should return an array of one bag containing the 1 item
+    5 items weighing 20 lbs total
+      should return an array of bags each weighing less than 10 lbs
+      should place each item in one (and only one) bag
+    All the items
+      should return an array of bags each weighing less than 10 lbs
+      should place each item in one (and only one) bag
 
-Failed examples:
+Searcher
+  #find_by_binary_search
+    should take 2 parameters
+    should find a number that exists
+    should find not a number that doesn't exist
 
-rspec /work/labs/algorithms-ruby-lab/shared/spec/lab_spec.rb:8 # MathExpert#calculate_factorial_iterative should return 24 for 4
+Pending:
+  Sorter#sort_array should sort a very large array from lowest to highest
+    # Temporarily disabled with xit
+    # /Users/user/Desktop/ga_submissions/wk2/algorithms-ruby-lab/shared/spec/lab_spec.rb:130
+
+Finished in 0.02494 seconds
+42 examples, 0 failures, 1 pending
