@@ -56,7 +56,7 @@ Failures:
        expected nil to be a kind of Array
      # /Users/anthonysallows/Documents/General Assembly/Labs/Lab 4/algorithms-ruby-lab/shared/spec/lab_spec.rb:235:in `block (4 levels) in <top (required)>'
 
-Finished in 0.28943 seconds
+Finished in 0.30558 seconds
 30 examples, 1 failure, 1 pending
 
 Failed examples:
